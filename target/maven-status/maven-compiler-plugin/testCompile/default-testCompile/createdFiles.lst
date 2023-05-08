@@ -1,0 +1,6 @@
+stepDefinition\Launch.class
+utils\ConfigFileReader.class
+net\qa\tasking\factory\PlayWrightFactory.class
+pages\Home.class
+pages\Login.class
+runner\TestRunner.class
