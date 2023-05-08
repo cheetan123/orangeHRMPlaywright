@@ -1,6 +1,7 @@
 package pages;
 
 import com.microsoft.playwright.Page;
+import org.junit.Assert;
 import utils.ConfigFileReader;
 
 import java.util.Properties;
@@ -16,10 +17,13 @@ public class Home {
         this.page = page;
     }
 
-    public void navigateToTask() {
+    public void verifyProfile() {
+        Assert.assertTrue(page.locator(ConfigFileReader.readProperties().getProperty("profile")).isVisible());
+    }
 
-        page.getByTestId(ConfigFileReader.readProperties().getProperty("btnLeftNav")).click();
-        page.getByTestId(ConfigFileReader.readProperties().getProperty("btnAutomation")).click();
-        page.getByTestId(ConfigFileReader.readProperties().getProperty("btnTask")).click();
+    public void logout() {
+
+        page.locator(ConfigFileReader.readProperties().getProperty("profile")).click();
+        page.locator(ConfigFileReader.readProperties().getProperty("logout")).click();
     }
 }

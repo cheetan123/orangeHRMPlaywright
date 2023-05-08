@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="78.78">
-<testcase classname="Login Test" name="Browser Launch" time="78.684">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="91.272">
+<testcase classname="Login Test" name="Browser Launch" time="91.184">
 <system-out><![CDATA[Given User launch the browser...............................................passed
 When User login to portal...................................................passed
-And User navigate to task page..............................................passed
-Then User close the browser.................................................passed
+Then User login successfully................................................passed
+And User logout from portal.................................................passed
+And User close the browser..................................................passed
 ]]></system-out>
 </testcase>
 </testsuite>

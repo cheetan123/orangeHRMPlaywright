@@ -32,22 +32,35 @@ public class Launch {
         login = new Login(page);
         login.inputUserName();
         try {
-            Thread.sleep(30000);
+            Thread.sleep(10000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
     }
 
-    @When("User navigate to task page")
-    public void navigateToTask() {
+    @Then("User login successfully")
+    public void verifyProfile() {
         home = new Home(page);
-        home.navigateToTask();
+        home.verifyProfile();
 
         try {
             Thread.sleep(30000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    @Then("User logout from portal")
+    public void logout() {
+        home = new Home(page);
+        home.logout();
+
+        try {
+            Thread.sleep(10000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+
     }
 
     @Then("User close the browser")
